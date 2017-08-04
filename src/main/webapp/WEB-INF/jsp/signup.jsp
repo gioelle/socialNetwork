@@ -37,20 +37,21 @@
 	</div>
 	</nav>
 	<div class="continer">
-		<form:form class="form-signin" method="post" action="login" modelAttribute="userLogin">
-			<h2 class="form-signin-heading">Please Sign In</h2>
+		<form:form class="form-signin" method="post" action="signup" modelAttribute="newUser">
+			<h2 class="form-signin-heading">Register Here</h2>
+			<form:label path="firstName">First Name</form:label>
+			<form:input path="firstName" type="text" class="form-control" placeholder="First Name" required="true"></form:input>
+			<form:label path="lastName">Last Name</form:label>
+			<form:input path="lastName" type="text" class="form-control" placeholder="Last Name" required="true"></form:input>
 			<form:label path="email">Email Address</form:label>
-			<form:input path="email" type="text" class="form-control" placeholder="Email"
-				required="true"></form:input>
+			<form:input path="email" type="text" class="form-control" placeholder="Email" required="true"></form:input>
+			<form:label path="age">Age</form:label>
+			<form:input path="age" type="text" class="form-control" placeholder="Age" required="true"></form:input>
+			<form:label path="profilePic">Upload a Profile Picture</form:label>
+			<form:input path="profilePic" type="file" class="form-control" required="false"></form:input>
 			<form:label path="password">Password</form:label>
-			<form:input path="password" type="password" class="form-control"
-				placeholder="Password" required="true"></form:input>
-			<div class="checkbox">
-				<label><input type="checkbox" value="remember-me">Remember
-					Me</label>
-			</div>
-			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign
-				In</button>
+			<form:input path="password" type="password" class="form-control" placeholder="Password" required="true"></form:input>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Sign	Up!</button>
 		</form:form>
 	</div>
 	<!--/.container -->
